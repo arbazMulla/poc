@@ -1,0 +1,366 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-top: .1px;
+}
+
+.row {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#nav {
+    height: 100px;
+    width: 100%;
+    margin-top: 30px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+#logo {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo h2 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+#nav-menu {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#nav-menu h2 {
+    font-size: 20px;
+    font-weight: 500;
+    width: 27%;
+    height: 100%;
+    border-right: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 20px;
+}
+
+#nav-menu h2:nth-child(3) {
+    width: 40%;
+}
+
+#nav-menu h2:last-child {
+    width: 6%;
+    border-right: 0;
+}
+
+#nav-menu h2:hover {
+    cursor: pointer;
+}
+
+#hero {
+    width: 100%;
+    height: 100%;
+    padding-block: 40px;
+    position: relative;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#overlay {
+    color: #fff;
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+}
+
+#overlay #over1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+#overlay #over2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#overlay #over1 h1 {
+    font-size: 44px;
+    font-family: monument;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+#overlay #over2 img {
+    width: 40px;
+}
+
+#main #scroll {
+    height: 50%;
+    width: 100%;
+    position: relative;
+    padding: 40px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll::-webkit-scrollbar {
+    display: none;
+}
+
+#scroll .scroller {
+    display: inline-block;
+    animation: scroller 20s infinite linear;
+}
+
+#scroll .scroller img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 200px;
+    margin-right: 35px;
+    transition: all 0.3s ease;
+}
+
+#scroll .scroller img:hover {
+    transform: scale(1.2);
+}
+
+#main #keywords {
+    height: 50%;
+    width: 100%;
+    padding: 40px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    margin-bottom: 40px;
+}
+
+#keywords #alphabets {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#keywords h4 {
+    /* 16 / 24 / 32 / 48 / 64 */
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    align-self: center;
+    width: fit-content;
+    position: relative;
+}
+
+#keywords h4::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+#keywords #alphabets h5 {
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all ease 0.2s;
+    border: 1px solid transparent;
+}
+
+#keywords #alphabets h5:hover {
+    border: 1px solid #000;
+}
+
+#main #articles {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+#articles #article-left {
+    width: 60%;
+    height: 100%;
+    margin-right: 40px;
+}
+
+#articles #article-left img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#articles #article-left h2 {
+    font-family: monument;
+    letter-spacing: 0px;
+    font-size: 40px;
+}
+
+#articles #article-right {
+    width: 40%;
+    height: 100%;
+}
+
+#articles #article-right img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#articles #article-right div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#articles #article-right div #article-right-left {
+    height: 100%;
+    width: 100%;
+}
+
+#articles #article-right div #article-right-left h3 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#articles #article-right div #article-right-right {
+    height: 100%;
+    width: 100%;
+}
+
+#articles #article-right div #article-right-right p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#main #updates {
+    height: 100%;
+    width: 100%;
+    padding-inline: 80px;
+    margin-bottom: 80px;
+}
+
+#updates h2 {
+    font-family: monument;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#updates .elems {
+    width: 100%;
+    height: 17vh;
+    padding-inline: 40px;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#updates .elems h3 {
+    width: 8%;
+}
+
+#updates .elems img {
+    width: 8%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.elems-part {
+    text-align: left;
+    width: 40%;
+}
+
+.elems-part h4 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.elems-part p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#scroll .text-scroller {
+    display: flex;
+    animation: 20s linear infinite scroller;
+}
+
+#scroll .text-scroller h3 {
+    font-size: 52px;
+    font-family: monument;
+    color: transparent;
+    -webkit-text-stroke: 2px #000;
+    margin-right: 15px;
+}
+
+@keyframes scroller {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
