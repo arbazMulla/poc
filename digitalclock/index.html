@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="section-wrapper">
+        <div class="clock">
+            <div id="hours">
+                <p class="hours">00</p>
+                <h3>Hours</h3>
+            </div>
+            <div id="minutes">
+                <p class="minutes">00</p>
+                <h3>Minutes</h3>
+            </div>
+            <div id="seconds">
+                <p class="seconds">00</p>
+                <h3>Seconds</h3>
+            </div>
+           
+            
+        </div>
+    </div>
+
+    <script>
+        const hrs = document.querySelector('.hours');
+        const min = document.querySelector('.minutes');
+        const sec = document.querySelector('.seconds');
+
+        setInterval(() => {
+            const date = new Date();
+
+            hrs.innerHTML = date.getHours();
+            min.innerHTML = date.getMinutes();
+            sec.innerHTML = date.getSeconds();
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>

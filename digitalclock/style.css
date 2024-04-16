@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.section-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient(circle 815px at 23.4% -21.8%, rgba(9, 29, 85, 1) 0.2%, rgba(0, 0, 0, 1) 100.2%);
+    display: grid;
+    place-items: center;
+
+    /* overflow: hidden; */
+}
+
+.clock {
+    color: #fff;
+    width: 60rem;
+    height: 18rem;
+    background-color: rgba(255, 255, 255, 0.128);
+    backdrop-filter: blur(80px);
+    padding-inline: 6rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#hours,
+#minutes,
+#seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 8rem;
+    line-height: 8.5rem;
+}
+
+@media (max-width: 992px) {
+    .section-wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 3.2rem;
+    }
+
+    .clock {
+        width: 100%;
+        height: 100%;
+        padding: 5rem;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 4.8rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: 300;
+    }
+
+    p {
+        font-size: 3.2rem;
+        line-height: 3.5rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .section-wrapper {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .clock {
+        gap: 1rem;
+        padding: 2.4rem;
+    }
+}
+@media (max-width: 200px) {
+    .clock {
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
